@@ -1,13 +1,14 @@
 from django.urls import path
 from . import views
+
 urlpatterns = [
-    path('', views.index, name="ShopHome"),
-    path('about', views.about, name="aboutUs"),
-    path('contact', views.contact, name="TrackingStatus"),
-    path('tracker', views.tracker, name="ShopHome"),
-    path('search', views.search, name="search"),
-    path('prodView', views.prodView, name="search"),
-    path('checkout', views.checkout, name="Checkout"),
+    path("", views.index, name="ShopHome"),
+    path("about/", views.about, name="AboutUs"),
+    path("contact/", views.contact, name="ContactUs"),
+    path("tracker/", views.tracker, name="TrackingStatus"),
+    path("search/", views.search, name="Search"),
+    path("products/<int:myid>", views.productView, name="ProductView"),
+    path("checkout/", views.checkout, name="Checkout"),
 ]
 
 
